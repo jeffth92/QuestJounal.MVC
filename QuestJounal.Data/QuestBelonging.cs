@@ -13,10 +13,10 @@ namespace QuestJounal.Data
         [Key]
         public int Id { get; set; }
         
-        [ForeignKey]
+        [ForeignKey(nameof(GameId))]
         public int GameId { get; set; }
 
-        [ForeignKey]
+        [ForeignKey(nameof(QuestId))]
         public int QuestId { get; set; }
     }
 }

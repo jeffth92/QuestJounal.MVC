@@ -12,7 +12,8 @@ namespace QuestJounal.Data
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey]
+
+        [ForeignKey(nameof(UserId))]
         public int UserId { get; set; }
         public bool IsActive { get; set; }
         public bool IsBanned { get; set; }

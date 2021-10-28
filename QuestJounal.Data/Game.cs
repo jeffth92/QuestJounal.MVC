@@ -18,9 +18,11 @@ namespace QuestJounal.Data
         public DateTime StartDate { get; set; }
         public DateTime JoinDate { get; set; } //might belong better in Player class.
         public bool IsActive { get; set; }
-        [ForeignKey] // needs fixing, as will all fkey in init
+
+        [ForeignKey(nameof(AdminId))]
         public int AdminId { get; set; }
-        [ForeignKey]
+
+        [ForeignKey(nameof(PlayerRoster))]
         public List<Player> PlayerRoster { get; set; }
     }
 }
