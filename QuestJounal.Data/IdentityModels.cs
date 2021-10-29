@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using QuestJounal.Data;
 
 namespace QuestJounal.MVC.Data
 {
@@ -32,7 +33,7 @@ namespace QuestJounal.MVC.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Note> Notes {get; set; } //LOOK HERE, THIS IS WRONG BUT LEFT TO FIND.
+        public DbSet<Quest> Quests {get; set; } //LOOK HERE, THIS IS WRONG BUT LEFT TO FIND.
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
